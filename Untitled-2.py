@@ -20,6 +20,11 @@ async def on_ready():
 @client.command(name="청소", pass_context=True)
 async def _clear(ctx, *, amount=5):
     await ctx.channel.purge(limit=amount)    
+    pass
+
+@client.command(name='list')
+async def _list(ctx, arg):
+    pass
 
 @client.event
 async def on_massage(message):
@@ -31,7 +36,7 @@ async def on_massage(message):
         await message.channel.send("why") 
 
     if message.content.startswith("!안녕"):
-        await message.channel.send('안녕하세요')
+        await message.channel.send("안녕하세요")
 
     if message.content.startswith("!계산"):
         global calcResult
