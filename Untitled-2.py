@@ -11,6 +11,10 @@ async def on_ready():
     print("로그인")
     game = discord.Game("steve bot 실행")
     await client.change_presence(status=discord.Status.online, activity=game)
+    
+@client.command(name="청소", pass_context=True)
+async def _clear(ctx, *, amount=5):
+    await ctx.channel.purge(limit=amount)    
 
 @client.event
 async def on_massage(message):
@@ -40,11 +44,11 @@ async def on_massage(message):
             await message.channel.send("숫자로 넣어주세요.")
         except ZeroDivisionError:
             await message.channel.send("You can't divide with 0.")
+            
+            
+            
 #[출처] 디스코드 봇 만들기 6 - 리팩터링하기 (1)|작성자 곰사냥 https://blog.naver.com/huntingbear21/221795947053
 
-@client.command(name="청소", pass_context=True)
-async def _clear(ctx, *, amount=5):
-    await ctx.channel.purge(limit=amount)    
-
+ 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
