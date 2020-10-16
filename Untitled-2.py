@@ -25,10 +25,10 @@ async def on_massage(message):
     if message.author.bot:
         return None
     
-    if message.content.startswitch("!안녕"):
+    if message.content.startswitch("안녕"):
         await message.channel.send("안녕하세요")
 
-    if message.content.startswith("!계산"):
+    if message.content.startswith("계산"):
         global calcResult
         param = message.content.split()
         try:
