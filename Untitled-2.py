@@ -18,7 +18,11 @@ async def _clear(ctx, *, amount=5):
 
 @client.event
 async def on_massage(message):
-    await app.process_commands(message)
+    await client.process_commands(message)
+    await client.process_commands(message)
+    if message.author.bot:
+        return None
+    
     if message.content.startswitch("!안녕"):
         await message.channel.send("안녕하세요")
 
