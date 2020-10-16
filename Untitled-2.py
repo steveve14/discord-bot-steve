@@ -17,4 +17,4 @@ async def on_massage(message):
     if message.content.startswitch("안녕"):
         await message.channel.send("안녕하세요")
 
-client.run("NzY2MjY2MTcwNzQ3Mzg3OTQ1.X4g2-w.r7dOd9_VibQ2D0GWA8T_BcNZBDw")
+client.run("")
