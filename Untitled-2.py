@@ -12,7 +12,7 @@ async def on_ready():
 
 @client.event
 async def on_massage(message):
-    if message.content.startswitch("안녕"):
+    if message.content.startswitch("!안녕"):
         await message.channel.send("안녕하세요")
         
         
