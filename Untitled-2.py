@@ -9,8 +9,9 @@ calcResult = 0
 
 @client.event
 async def on_ready():
-    print(client.user.id)
     print("로그인")
+    print(client.user.name)
+    print(client.user.id)
     game = discord.Game("steve bot 실행")
     await client.change_presence(status=discord.Status.online, activity=game)
     
@@ -21,14 +22,13 @@ async def _clear(ctx, *, amount=5):
 @client.event
 async def on_massage(message):
     await client.process_commands(message)
-    await client.process_commands(message)
     if message.author.bot:
         return None
     
-    if message.content.startswitch("!안녕"):
-        await message.channel.send("안녕하세요")
+    if message.content == '안녕':
+        await message.channel.send('안녕하세요')
 
-    if message.content.startswith("!계산"):
+    if message.content.startswith('!계산'):
         global calcResult
         param = message.content.split()
         try:
