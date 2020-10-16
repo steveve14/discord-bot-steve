@@ -2,8 +2,10 @@ import discord
 import os
 import asyncio
 from discord.ext import commands
+from discord.ext.commands import bot
 
 client = commands.Bot(command_prefix='!')
+calcResult = 0
 
 @client.event
 async def on_ready():
