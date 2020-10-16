@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -13,5 +14,7 @@ async def on_ready():
 async def on_massage(message):
     if message.content.startswitch("안녕"):
         await message.channel.send("안녕하세요")
-
-client.run("")
+        
+        
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
