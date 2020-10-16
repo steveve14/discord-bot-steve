@@ -9,7 +9,7 @@ client = commands.Bot(command_prefix='!')
 async def on_ready():
     print(client.user.id)
     print("로그인")
-    game = discord.Game("steve bot 실행중")
+    game = discord.Game("steve bot 실행")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
