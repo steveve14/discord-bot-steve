@@ -1,2 +1,2 @@
-python-3.6.2
-asyncio
+python-3.8.5
+asyncio-3.4.3
