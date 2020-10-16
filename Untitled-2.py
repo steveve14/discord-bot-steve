@@ -27,7 +27,10 @@ async def on_massage(message):
     
     if message.content == '안녕':
         await message.channel.send('안녕하세요')
-
+        
+    if message.content == 'ping':
+            await message.channel.send('pong')
+        
     if message.content.startswith('!계산'):
         global calcResult
         param = message.content.split()
