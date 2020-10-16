@@ -22,7 +22,7 @@ async def _clear(ctx, *, amount=5):
     await ctx.channel.purge(limit=amount)    
     pass
 
-@client.command(name='list')
+@client.command(name="list")
 async def _list(ctx, arg):
     pass
 
