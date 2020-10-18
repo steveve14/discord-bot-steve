@@ -1,1 +1,1 @@
-worker: python Untitled-2.py
+worker: python steve-bot-test.py
