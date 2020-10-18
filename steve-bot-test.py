@@ -31,9 +31,9 @@ async def on_massage(message):
     await client.process_commands(message)
     if message.author.bot:
         return None
-    if message.content.startswitch("say"): 
+    if message.content.startswitch("!say"): 
         await message.channel.send("why") 
-    if message.content.startswith("안녕"):
+    if message.content.startswith("!안녕"):
         await message.channel.send("안녕하세요")
     if message.content.startswith("계산"):
         global calcResult
