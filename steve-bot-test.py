@@ -54,4 +54,5 @@ async def on_massage(message):
             await message.channel.send("숫자로 넣어주세요.")
         except ZeroDivisionError:
             await message.channel.send("You can't divide with 0.")
-client.run('NzY2MjY2MTcwNzQ3Mzg3OTQ1.X4g2-w.wDNmN0Y5j3OTfq04BbOI1utT8hU')
+    access_token = os.environ["BOT_TOKEN"]
+    client.run(access_token)
